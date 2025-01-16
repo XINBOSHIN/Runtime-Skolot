@@ -1,0 +1,413 @@
+/*-- DrLeonardo styles refactor --*/
+@import "./variables.css";
+
+/*-- Подключение шрифтов --*/
+@font-face {
+    font-family: 'Raleway';
+    src: url('./Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: 'Raleway Bold';
+    src: url('./Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: 'Raleway Bold';
+    src: url('./Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: 'Raleway Italic';
+    src: url('./Raleway-Italic.ttf');
+}
+@font-face {
+    font-family: 'Raleway SemiBold';
+    src: url('./Raleway-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Raleway ExtraBold';
+    src: url('./Raleway-ExtraBold.ttf');
+}
+
+Button,
+CheckBox,
+ComboBox,
+RadioButton {
+    -fx-cursor: hand;
+}
+
+/*-- Шрифты --*/
+.root {
+    -fx-font-family: "Raleway";
+}
+
+/*-- Вид блоков --*/
+.blocks {
+    -fx-padding: 10px;
+    -fx-background-color: -fx-white;
+    -fx-background-radius: 0;
+}
+
+/*-- Скругление блоков и кнопок --*/
+.b-5 {
+    -fx-border-radius: 5px;
+}
+.b-10 {
+    -fx-border-radius: 10px;
+}
+.b-20 {
+    -fx-border-radius: 20px;
+}
+
+/*-- Управление прозрачностью --*/
+.transparent {
+    -fx-font-family: "Raleway SemiBold";
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+}
+
+.button_category{
+    -fx-background-color: transparent;
+    -fx-border-radius: 44px;
+    -fx-background-radius: 44px;
+    -fx-border-width: 0.5px;
+    -fx-border-color: rgba(52, 52, 52, 0.12);
+    -fx-padding: 8px 15px 8px 15px;
+    -fx-text-fill: #848484;
+}
+
+.button_category_active{
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-background-color: linear-gradient(to right, #485563 0%, #29323C 100%);
+}
+
+.button_category:hover{
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-background-color: linear-gradient(to right, #485563 0%, #29323C 100%);
+}
+
+/*-- Импорт фона --*/
+#layout {
+    -fx-background-image: url('../images/background.png');
+    -fx-background-size: cover;
+}
+.blur {
+    -fx-background-image: url('../images/background-blur.png') !important;
+    -fx-background-size: cover;
+}
+
+/* (тех. Кнопки) */
+.invisible{
+    -fx-opacity: 0;
+}
+.visible{
+    -fx-opacity: 1;
+}
+
+/*-- Иконки --*/
+.header-button {
+    -fx-fill: transparent;
+    -fx-stroke: -fx-header;
+    -fx-stroke-width: 1px;
+}
+.header-button-text {
+    -fx-font-size: 10px;
+    -fx-fill: -fx-header;
+    -fx-align-items: center;
+    -fx-font-weight: bold;
+}
+.header-button:hover,
+.icon-button:hover {
+    -fx-opacity: 0.6;
+}
+.icon-button {
+    -fx-background-position: center;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+.icon-button-color {
+    -fx-fill: -fx-header;
+}
+.icon-button-error {
+    -fx-fill: -fx-red;
+}
+
+.icon-button2 {
+    -fx-background-position: left;
+    -fx-background-radius: 0;
+    -fx-fill: #fff;
+    -fx-text-fill: #fff;
+    -fx-background-color: transparent;
+}
+
+/*-- Информация игрока --*/
+#nickname {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-black2C;
+}
+#money {
+    -fx-font-weight: normal;
+    -fx-font-size: 12px;
+    -fx-text-fill: -fx-black2C;
+}
+#avatar {
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+    -fx-font-smoothing-type: lcd;
+}
+
+/*-- Заголовки --*/
+#dialogHeader,
+#headingUpdate,
+#headingDialog,
+#headerDescription {
+    -fx-fill: -fx-black2C;
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/*-- Блок вывода --*/
+#output-detail {
+    -fx-background-color: -fx-grayTr;
+    -fx-background-radius: 20px;
+}
+
+/* Вывод лога */
+#output-detail > #output {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-text-color: -fx-black2C;
+}
+#output-detail > #output .content,
+#output-detail > #output .content {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+/*-- Кнопка отправить --*/
+.send-button-text {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-text-align: center;
+    -fx-fill: -fx-header;
+}
+.send-button-text:hover,
+.send-button-text:pressed {
+    -fx-fill: -fx-header-hover;
+}
+
+/*-- Контекстное меню --*/
+.context-menu {
+    -fx-background-color: -fx-whiteG;
+    -fx-background-insets: 0;
+    -fx-padding: 5px;
+    -fx-text-fill: -fx-black2C;
+    -fx-background-radius: 5px;
+}
+.menu-item {
+    -fx-background-radius: 0px;
+}
+.menu-item:hover, .menu-item:focused {
+    -fx-background-color: -fx-grayLTr;
+}
+.menu-item > .graphic-container {
+    -fx-padding: 0em 0.333em 0em 0em;
+}
+.menu-item .label {
+    -fx-text-fill: -fx-black2C;
+}
+.menu-item:focused .label {
+    -fx-text-fill: -fx-black2C-hover;
+    -fx-font-weight: bold;
+}
+
+
+/* check-box элементы */
+.check-box {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-black2C;
+    -fx-background-image: url('../images/icons/checkbox1_off.png');
+    -fx-background-repeat: no-repeat;
+    -fx-label-padding: 0 0 0 10px;
+    -fx-font-size: 14px;
+    -fx-text-align: left;
+}
+.check-box .mark {
+    -fx-background-color: transparent;
+}
+.check-box .box {
+    -fx-background-color: transparent;
+}
+.check-box:selected {
+    -fx-background-color: transparent;
+    -fx-background-image: url('../images/icons/checkbox1_on.png');
+    -fx-background-repeat: no-repeat;
+}
+.check-box:selected .mark {
+    -fx-background-color: transparent;
+}
+.check-box:selected .box {
+    -fx-background-color: transparent;
+}
+
+
+/* Скролл панели */
+/* Скролл панели */
+#scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane .content {
+    -fx-background-color: transparent;
+}
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+.increment-button,
+.decrement-button,
+.increment-arrow,
+.decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: #2B2B30;
+    -fx-border-color: transparent;
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #0091FF;
+    -fx-background-radius: 5;
+    -fx-padding: 5 0 0 0px;
+    -fx-background-insets: 0, 0, 0, 5;
+}
+.select_server{
+    -fx-fill: #343434;
+    -fx-background-color: transparent;
+    -fx-font-size: 17px;
+    -fx-font-family: "Raleway Bold";
+    
+}
+.all_online{
+    -fx-fill: white;
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-font-family: "Raleway Bold";
+}
+.scroll-bar {
+    -fx-font-size: 1px;
+}
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+/* При наведении на slide, изменяем opacity на 1 с плавным переходом */
+.slide:hover {
+    -fx-opacity: 0.7;
+}
+
+.slide_active {
+    -fx-opacity: 1!important;
+}
+
+/* При клике на slide, изменяем opacity на 1 с плавным переходом */
+.slide:pressed {
+    -fx-opacity: 1;
+}
+.link_a{
+    -fx-cursor: hand;
+}
+.link_a:hover{
+    -fx-opacity: 0.7;
+}
+
+/* Изначальная настройка opacity на 0.3 */
+.slide {
+    -fx-opacity: 0.3;
+}
+.increment-button,
+.decrement-button,
+.increment-arrow,
+.decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+
+/* choice-box элементы */
+.choice-box .context-menu {
+    -fx-background-color: -fx-whiteG;
+    -fx-pref-width: 130px;
+}
+.choice-box .menu-item:focused {
+    -fx-background-color: -fx-violet;
+}
+.choice-box .menu-item > .label {
+    -fx-text-fill: -fx-black2C;
+}
+.choice-box .menu-item:focused>.label {
+    -fx-text-fill: -fx-white;
+}
+.choice-box {
+    -fx-background-color: -fx-whiteG;
+    -fx-mark-color: -fx-whiteG;
+}
+.choice-box > .label {
+    -fx-text-fill: -fx-whiteG;
+}
+
+/* combo-box элементы */
+.combo-box {
+    -fx-background-color: -fx-grayLDTr;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5;
+    -fx-text-fill: -fx-black2C;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+.combo-box .list-cell {
+    -fx-text-fill: -fx-black2C;
+}
+.combo-box-popup .list-view{
+    -fx-background-color: -fx-gray;
+}
+.combo-box-popup .list-view .list-cell{
+    -fx-text-fill: -fx-black2C;
+    -fx-padding: 5;
+    -fx-background-color: -fx-gray;
+}
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover{
+    -fx-background-color: -fx-grayTr;
+    -fx-text-fill: -fx-black2C-hover;
+    -fx-font-weight: bold;
+}
+.combo-box-popup .list-view .list-cell:filled:hover{
+    -fx-background-color: -fx-grayTr;
+    -fx-text-fill: -fx-black2C-hover;
+}
+.combo-box-popup .list-cell {
+    -fx-background-color: -fx-whiteG;
+    -fx-text-fill: -fx-black2C;
+}
+.combo-box .arrow{
+    -fx-background-color: transparent;
+}
+.combo-box .arrow-button{
+    -fx-background-image: url('../images/icons/checkbox_arrow_button.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-background-position: center center;
+    -fx-background-size: 50% 25%;
+}
+/*-- DrLeonardo styles refactor --*/

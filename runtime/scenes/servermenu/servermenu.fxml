@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane fx:id="serverPane" prefHeight="651.0" prefWidth="1000.0" styleClass="transparent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <Pane fx:id="layout" prefHeight="650.0" prefWidth="1000.0" styleClass="transparent">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f1f2f2" height="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
+      <ScrollPane id="servers" fx:id="serverlist1" hbarPolicy="NEVER" hmax="0.0" layoutX="68.0" layoutY="323.0" prefHeight="327.0" prefWidth="865.0">
+         <content>
+            <GridPane alignment="TOP_CENTER" prefHeight="235.0" prefWidth="200.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="-Infinity" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints valignment="TOP" vgrow="ALWAYS" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <HBox fx:id="categorys" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="268.0" prefHeight="32.0" prefWidth="720.0" spacing="15.0" />
+      <Text layoutX="68.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="select_server" text="Выберите сервер" />
+      <ImageView id="slide_image" fitHeight="162.0" fitWidth="416.0" layoutX="68.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/sliders/slide_1.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="162.0" fitWidth="416.0" layoutX="517.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/sliders/right-slide.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="741.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/sliders/fox.gif" />
+         </image>
+      </ImageView>
+      <Label id="all_online" layoutX="552.0" layoutY="145.0" prefHeight="69.0" prefWidth="189.0" styleClass="all_online" text="Идет загрузка онлайна..." textFill="WHITE" wrapText="true" />
+      <HBox id="slider" alignment="CENTER_RIGHT" layoutX="410.0" layoutY="207.0" prefHeight="24.0" prefWidth="55.0" spacing="5.0" />
+      <Rectangle arcHeight="4.0" arcWidth="4.0" fill="WHITE" height="9.0" layoutX="10.0" layoutY="10.0" opacity="0.37" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="9.0" />
+
+        <!-- Навбар -->
+         <Pane id="header" prefHeight="100.0" prefWidth="1000.0">
+             <children>
+            <Rectangle arcHeight="5.0" fill="WHITE" height="67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
+            <ImageView fitHeight="132.0" fitWidth="365.0" layoutX="318.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/background-logotype.png" />
+               </image>
+            </ImageView>
+
+                 <!-- Счет игрока -->
+            <Label id="role" layoutX="666.0" layoutY="34.0" prefHeight="20.0" prefWidth="282.0" visible="false">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                <tooltip>
+                    <Tooltip id="moneyTooltip" text="%runtime.scenes.servermenu.moneyTooltip" />
+                </tooltip>
+            </Label>
+            <ImageView fitHeight="69.0" fitWidth="160.0" layoutX="420.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logotype.png" />
+               </image>
+            </ImageView>
+
+                 <!-- Кнопки управления -->
+                 <Pane id="controls" layoutX="920.0" layoutY="21.0" prefHeight="22.0" prefWidth="66.0">
+                     <children>
+
+                         <!-- Кнопка выхода -->
+                         <Button alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="14.0" layoutY="-7.0" prefHeight="32.0" prefWidth="32.0" styleClass="icon-button" textAlignment="CENTER" textFill="#464646" visible="false">
+                             <graphic>
+                                 <SVGPath id="icons" content="M324.811 27.9868L343.176 27.9868C344.726 27.9868 345.987 26.7258 345.987 25.1759L345.987 21.4279L344.999 21.4279L344.999 25.1759C344.999 25.9929 343.999 26.9929 343.176 26.9929L324.811 26.9929C323.999 26.9929 322.999 25.9929 322.999 25.1759L322.999 6.81104C322.999 5.99292 323.999 4.99292 324.811 4.99292L343.176 4.99292C343.999 4.99292 344.999 5.99292 344.999 6.81104L344.999 10.559L345.987 10.559L345.987 6.81104C345.987 5.26107 344.726 4.00009 343.176 4.00009L324.811 4.00008C323.261 4.00008 322 5.26107 322 6.81104L322 25.1759C322 26.7258 323.261 27.9868 324.811 27.9868Z M332 16.8046L343.057 16.8046L340.137 19.8621L341.224 21L346 16L341.224 11L340.137 12.1379L343.057 15.1954L332 15.1954L332 16.8046Z" styleClass="icon-button-color" />
+                             </graphic>
+                             <tooltip>
+                                 <Tooltip id="deauthTooltip" text="%runtime.scenes.servermenu.deauthTooltip" />
+                             </tooltip>
+                         </Button>
+
+                         <!-- Кнопка закрыть -->
+                         <Button id="exit" graphicTextGap="0.0" layoutX="35.0" layoutY="-2.0" mnemonicParsing="false" styleClass="icon-button">
+                             <graphic>
+                                 <SVGPath content="M15.5892 4.4107C15.9147 4.73614 15.9147 5.26378 15.5892 5.58921L5.58921 15.5892C5.26378 15.9147 4.73614 15.9147 4.4107 15.5892C4.08527 15.2638 4.08527 14.7361 4.4107 14.4107L14.4107 4.4107C14.7361 4.08527 15.2638 4.08527 15.5892 4.4107Z M4.4107 4.4107C4.73614 4.08527 5.26378 4.08527 5.58921 4.4107L15.5892 14.4107C15.9147 14.7361 15.9147 15.2638 15.5892 15.5892C15.2638 15.9147 14.7361 15.9147 14.4107 15.5892L4.4107 5.58921C4.08527 5.26378 4.08527 4.73614 4.4107 4.4107Z" styleClass="icon-button-color" />
+                             </graphic>
+                             <tooltip>
+                                 <Tooltip id="exitTooltip" text="%runtime.scenes.servermenu.exitTooltip" />
+                             </tooltip>
+                         </Button>
+
+                         <!-- Кнопка свернуть -->
+                         <Button id="minimize" layoutX="6.0" layoutY="-2.0" mnemonicParsing="false" styleClass="icon-button">
+                             <graphic>
+                                 <SVGPath content="M3.16663 8.91219C3.16663 8.52099 3.52107 8.20386 3.95829 8.20386H15.0416C15.4789 8.20386 15.8333 8.52099 15.8333 8.91219C15.8333 9.30339 15.4789 9.62052 15.0416 9.62052H3.95829C3.52107 9.62052 3.16663 9.30339 3.16663 8.91219Z" styleClass="icon-button-color" />
+                             </graphic>
+                             <tooltip>
+                                 <Tooltip id="minimizeTooltip" text="%runtime.scenes.servermenu.minimizeTooltip" />
+                             </tooltip>
+                         </Button>
+                     </children>
+                 </Pane>
+            <HBox layoutX="53.0" layoutY="14.0" prefHeight="39.0" prefWidth="298.0" spacing="15.0">
+               <children>
+                  <HBox id="link_to_site_1" alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="88.0" styleClass="link_a">
+                     <children>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/icons/shop.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fill="#343434" strokeType="OUTSIDE" strokeWidth="0.0" text="Магазин">
+                           <styleClass>
+                              <String fx:value="linka_text" />
+                              <String fx:value="link_href_1" />
+                           </styleClass></Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox id="link_to_site_2" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/icons/rules.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fill="#343434" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="linka_text" text="Правила" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="link_a" />
+                        <String fx:value="link_shop_2" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="link_to_site_3" alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="88.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/icons/help.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fill="#343434" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="linka_text" text="Помощь" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="link_a" />
+                        <String fx:value="link_shop_3" />
+                     </styleClass>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox id="get_options" alignment="CENTER_LEFT" layoutX="760.0" layoutY="11.0" prefHeight="46.0" prefWidth="160.0" styleClass="link_a">
+               <children>
+      
+                       <!-- Аватар игрока -->
+                     <ImageView id="avatar" fitHeight="32.0" fitWidth="32.0" smooth="false">
+                         <Image url="@../../images/icons/default.png" />
+                     </ImageView>
+      
+                       <!-- Никнейм игрока -->
+                     <Label id="nickname" prefHeight="20.0" prefWidth="124.0" text="PLAYER123">
+                         <padding>
+                             <Insets left="10.0" />
+                         </padding>
+                     </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="608.0" layoutY="11.0" prefHeight="46.0" prefWidth="117.0">
+               <children>
+                  <ImageView id="link_to_site_4" fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" styleClass="link_a">
+                     <image>
+                        <Image url="@../../images/icons/vk.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="8.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView id="link_to_site_5" fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" styleClass="link_a">
+                     <image>
+                        <Image url="@../../images/icons/discord.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="8.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView id="link_to_site_6" fitHeight="29.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="link_a">
+                     <image>
+                        <Image url="@../../images/icons/telegram.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane id="menu_profile_top" layoutX="760.0" layoutY="57.0" prefHeight="58.0" prefWidth="160.0" visible="false">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/frame.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="62.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/frame.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="62.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/frame.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="link_to_site_7" layoutX="24.0" layoutY="11.0" styleClass="link_a" text="О лаунчере" textFill="WHITE" />
+                  <Button id="deauth" alignment="BOTTOM_LEFT" layoutX="18.0" layoutY="27.0" prefHeight="20.0" prefWidth="79.0" text="Выйти" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip id="deauthTooltip" text="Выйти" />
+                     </tooltip>
+                     <styleClass>
+                        <String fx:value="icon-button2" />
+                        <String fx:value="link_a" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </Pane>
+             </children>
+         </Pane>
+    </Pane>
+
+    <!-- Подключение стилей-->
+    <stylesheets>
+        <URL value="@servermenu.css" />
+        <URL value="@../../styles/global.css" />
+        <URL value="@../../styles/variables.css" />
+    </stylesheets>
+
+</Pane>

@@ -1,0 +1,115 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../styles/global.css";
+@import "../styles/variables.css";
+
+/*-- Уведомления --*/
+.text-font-head {
+    -fx-text-fill: white!important;
+    -fx-font-size: 15px;
+}
+.text-font-desc {
+    -fx-text-fill: white!important;
+    -fx-font-size: 13px;
+}
+.server_online{
+	-fx-text-fill: white!important;
+    -fx-font-size: 12px;
+	-fx-alignment: center-left;
+    -fx-font-weight: bold;
+}
+
+.notificationProgress {
+	-fx-background-radius: 0px 0px 10px 0px;
+}
+.startgame{
+	-fx-text-fill: white!important;
+    -fx-font-size: 14px;
+}
+.button_start{
+	-fx-background-radius: 0px 0px 7px 7px;
+}
+
+#notificationPane {
+    -fx-background-radius: 0px 10px 10px 0px;
+	-fx-background-color: white;
+	/*-fx-border-insets: 0 0 0 0;
+    -fx-border-color: #292B2D;
+    -fx-border-width: 2;*/
+}
+.game_option{
+    -fx-font-family: "Raleway SemiBold";
+    -fx-text-fill: rgba(255, 255, 255, 1)!important;
+    -fx-font-size: 12px;
+}
+/*-- Блок сервера --*/
+.serverButtons {
+    -fx-background-radius: 20px;
+}
+#serverButton {
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+}
+
+#serverButtonSelected,
+#serverButtonPressed {
+    -fx-background-color: -fx-grayTr-hover;
+}
+.serverButtonsActive {
+    -fx-background-color: -fx-grayTr-hover;
+}
+#serverLogo {
+    -fx-background-position: center;
+}
+
+
+/*-- Информация о сервере --*/
+#nameServer {
+    -fx-text-fill: white;
+    -fx-font-family: "TT Norms Bold";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+	-fx-alignment: center-left;
+}
+
+#genreServer {
+    -fx-text-fill: white;
+    -fx-font-family: "TT Norms Bold";
+    -fx-font-size: 12px;
+}
+
+
+/*-- Индикатор онлайна --*/
+#block-online {
+    -fx-background-radius: 5px;
+}
+#online {
+    -fx-text-fill: -fx-white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+
+/*-- Кнопка сохранить (для всех сцен) --*/
+#save {
+    -fx-background-color: #0091FF;
+    -fx-font-family: "TT Norms Bold";
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-white;
+	-fx-background-radius: 0px 0px 5px 5px;
+}
+#save:hover {
+    -fx-background-color: #00B1FF;
+}
+#reset {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-align: center;
+    -fx-text-fill: -fx-white;
+    -fx-background-color: -fx-red;
+    -fx-background-radius: 5px;
+}
+#reset:hover {
+    -fx-background-color: -fx-red-hover;
+}
+/*-- DrLeonardo styles refactor --*/

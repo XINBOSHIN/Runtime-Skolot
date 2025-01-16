@@ -1,0 +1,18 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+.linka_text{
+    -fx-font-family: "Raleway SemiBold";
+    -fx-text-fill: #343434!important;
+    -fx-font-size: 13px;
+}
+
+#nickname{
+    -fx-font-family: "Raleway Bold";
+    -fx-text-fill: #343434!important;
+    -fx-font-size: 13px;
+}
+
+/*-- DrLeonardo styles refactor --*/

@@ -1,0 +1,27 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+/*-- Вывод данных --*/
+#options-detail {
+    -fx-background-color: -fx-grayTr;
+    -fx-background-radius: 20px;
+}
+
+/*-- Чекбоксы --*/
+.optional-container {
+    -fx-background-color: transparent;
+    -fx-padding: 15 0 0 15px;
+}
+.optional-checkbox {
+    -fx-fill: -fx-black2C;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.optional-label {
+    -fx-fill: -fx-black2C;
+    -fx-font-size: 12px;
+    -fx-label-padding: 0 20 0 30px;
+}
+/*-- DrLeonardo styles refactor --*/
