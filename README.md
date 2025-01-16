@@ -18,6 +18,6 @@
 Для начала работы с Runtime-Skolot клонируйте репозиторий и следуйте инструкциям по установке в файле `README.md`.  
 
 ```bash  
-git clone https://github.com/yourusername/Runtime-Skolot.git  
+git clone https://github.com/XINBOSHIN/Runtime-Skolot.git
 cd Runtime-Skolot  
 # Следуйте дальнейшим инструкциям...
